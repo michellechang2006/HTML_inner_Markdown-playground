@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  #the-custom-id{
+        color: red;
+    }
+</style>
+<body>
+    <div id="output"></div>
+
+    <script src="js/showdown.min.js"></script>
+    <script>
+        var converter = new showdown.Converter(),
+            text = '# Header text',
+            html = converter.makeHtml(text);
+        document.getElementById('output').innerHTML = html;
+    </script>
+
+</body>
+</html>
